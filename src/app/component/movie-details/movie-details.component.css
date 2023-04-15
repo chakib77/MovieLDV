@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
+
+.movie-details {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+img {
+  max-width: 50%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 15%;
+}
+
+.movie-details .haut {
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #222;
+  color: #fff;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 18px;
+}
+
+.row{
+  margin-top: 2%;
+  margin-bottom: 1%;
+}

@@ -1,0 +1,20 @@
+@startuml solution
+title Architecture de la solution
+
+package "Client" {
+  [Navigateur]
+}
+
+database "API" {
+  [Serveur API]
+}
+
+package "Base de données" {
+  database "Base de données MySQL" {
+    [Tables de la base de données]
+  }
+}
+
+[Navigateur] --> [Serveur API] : Requêtes HTTP
+[Serveur API] --> [Tables de la base de données] : Requêtes SQL
+@enduml

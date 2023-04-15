@@ -1,0 +1,36 @@
+<html>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Colonne avec la description -->
+      <div class="col-md-6 d-flex align-items-center">
+        <div>
+          <h1 class="mb-4">Bienvenue sur notre plateforme de films en ligne</h1>
+          <p class="lead">Découvrez notre large sélection de films, des classiques aux dernières sorties en passant par
+            des films indépendants et des documentaires.</p>
+          <p class="lead">Profitez d'une expérience de visionnage unique, avec des fonctionnalités avancées telles que
+            la recherche par catégorie, les recommandations personnalisées et la possibilité de créer des listes de
+            favoris.</p>
+          <a href="#" class="btn btn-primary mt-4">Découvrir maintenant</a>
+        </div>
+      </div>
+      <!-- Colonne avec l'image -->
+      <div class="col-md-6">
+        <img src="img/movieldv.jpg" class="img-fluid rounded" alt="Image de film">
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="film-list">
+      <div *ngFor="let film of qFilms">
+        <h2>{{ film.title }}</h2><br>
+        <img src="https://image.tmdb.org/t/p/w500{{ film.poster_path }}" alt="{{ film.title }}" />
+        <button class="btn btn-primary"><a href="/details">Plus de détails</a></button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

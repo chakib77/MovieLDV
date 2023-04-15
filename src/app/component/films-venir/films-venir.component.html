@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Films à venir</h1>
+      <ul class="list-unstyled">
+        <li *ngFor="let film of filmsAVenir">
+          <div class="row mb-3">
+
+            <div class="col-md-3">
+              <img src="{{'https://image.tmdb.org/t/p/w500'+film.poster_path}}" alt="{{film.title}}"
+                class="img-fluid rounded">
+            </div>
+
+            <div class="col-md-5 align-self-center">
+              <h3>{{film.title}}</h3>
+              <p>{{film.release_date}}</p>
+
+              <div class="col-md-2 align-self-center">
+                <button class="btn btn-primary" (click)="showDetails(film.id)">Description</button>
+              </div>
+
+            </div>
+
+            <div class="col-md-4 align-self-center"*ngIf="film.id === selectedFilmId">
+              <p>{{selectedFilmOverview}}</p>
+            </div>
+
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

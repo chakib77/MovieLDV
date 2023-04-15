@@ -1,0 +1,6 @@
+<div *ngFor="let movie of favo">
+  <h3>{{ movie.title }}</h3>
+  <p>{{ movie.overview }}</p>
+  <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" />
+  <button (click)="supprimerFilmFavori(movie)">Supprimer des favoris</button>
+</div>

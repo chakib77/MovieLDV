@@ -1,0 +1,20 @@
+@startuml utilisation
+left to right direction
+
+actor Utilisateur as user
+rectangle Application {
+  usecase "Voir la liste des films" as UC1
+  usecase "Voir le détail d'un film" as UC2
+  usecase "Ajouter un film aux favoris" as UC3
+  usecase "Voir les favoris" as UC4
+  usecase "Trier les films(genre, ...)" as UC5
+  usecase "Voir les films à venir" as UC6
+}
+
+user --> UC1
+UC1 -- UC2 : <<extends>>
+UC2 -- UC3 : <<extends>>
+user --> UC4
+UC1 -- UC5 : <<extends>>
+user --> UC6
+@enduml

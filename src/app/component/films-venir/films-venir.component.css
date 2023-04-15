@@ -1,0 +1,42 @@
+.container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+.list-unstyled li {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.list-unstyled li img {
+    max-width: 60%;
+    border-radius: 10px;
+}
+
+.list-unstyled li h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.list-unstyled li p {
+    font-size: 18px;
+    margin: 0;
+}
+
+@media (max-width: 576px) {
+    .list-unstyled li {
+        display: block;
+    }
+
+    .list-unstyled li img {
+        margin-bottom: 10px;
+    }
+}
